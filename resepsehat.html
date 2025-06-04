@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NutriLife</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="styling/resepsehat.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light border-bottom shadow-sm sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="dashboard.html"><img src="Aset/Logo NL.png" alt="NutriLife Logo"
+                    height="40"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    <a class="nav-link" href="sdgs.html">Tentang SDG's</a>
+                    <a class="nav-link" href="panduangizi.html">Panduan Gizi</a>
+                    <a class="nav-link active-custom" href="resepsehat.html">Resep Sehat</a>
+                    <a class="nav-link" href="kampanye.html">Kampanye Kesehatan</a>
+                    <a class="nav-link" href="kalkulator1.html">Kalkulator</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container hero-content">
+            <div class="row align-items-center h-100">
+                <div class="col-lg-8 offset-lg-0">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Kumpulan Resep Sehat</h1>
+                        <p class="hero-description">
+                            Makan sehat tidak berarti mengorbankan rasa. Berikut adalah koleksi resep yang tidak hanya
+                            bergizi tetapi juga lezat, mudah disiapkan, dan terjangkau. Setiap resep dirancang untuk
+                            memenuhi kebutuhan nutrisi dan memberikan variasi dalam menu harian Anda.
+                        </p>
+                        <button class="btn-learn-more" onclick="showContent()">Lihat Resep</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="person-image">
+            <img src="Aset/Adobe Express - file (10) 1.png" alt="Person">
+        </div>
+    </section>
+
+    <div class="content-sections" id="contentSections">
+        <div class="container my-5">
+            <div class="filter-section">
+                <h5 class="fw-bold mb-3">Filter Kategori:</h5>
+                <button class="filter-btn active" data-category="semua">Semua</button>
+                <button class="filter-btn" data-category="utama">Menu Utama</button>
+                <button class="filter-btn" data-category="sarapan">Sarapan</button>
+                <button class="filter-btn" data-category="snack">Snack Sehat</button>
+                <button class="filter-btn" data-category="minuman">Minuman</button>
+            </div>
+
+            <div id="loading" class="loading">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p>Memuat resep...</p>
+            </div>
+
+            <div id="resep-container" class="row justify-content-center" style="display: none;">
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-text">
+                    © 2025 NutriLife. Semua hak cipta dilindungi.
+                </div>
+                <div class="social-links">
+                    <span>Ikuti Kami</span>
+                    <a href="#" class="social-icon"><img src="Aset/Vector.png" alt=""></a>
+                    <a href="#" class="social-icon"><img src="Aset/X.png" alt=""></a>
+                    <a href="#" class="social-icon"><img src="Aset/FB.png" alt=""></a>
+                    <a href="#" class="social-icon"><img src="Aset/YT.png" alt=""></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const resepData = [
+            {
+                id: 1,
+                nama: "Nasi Merah Ayam Panggang",
+                deskripsi: "Menu utama seimbang yang terdiri dari ayam panggang tanpa kulit dan nasi merah. Lezat, mengenyangkan, dan tetap sehat.",
+                gambar: "Aset/nasi merah ayam.png",
+                kategori: "utama",
+                waktu_update: "3 mins ago"
+            },
+            {
+                id: 2,
+                nama: "Salad Sayur Pelangi",
+                deskripsi: "Campuran sayur segar berwarna-warni seperti wortel, kol ungu, dan tomat yang disajikan dengan dressing minyak zaitun dan lemon. Segar, renyah, dan cocok sebagai menu pembuka.",
+                gambar: "Aset/salad sayur.png",
+                kategori: "snack",
+                waktu_update: "5 mins ago"
+            },
+            {
+                id: 3,
+                nama: "Smoothie Buah Segar",
+                deskripsi: "Minuman sehat yang menyegarkan, terbuat dari pisang, stroberi, dan yogurt rendah lemak. Rasanya manis alami, teksturnya lembut, dan cocok untuk sarapan cepat atau camilan sehat di siang hari.",
+                gambar: "Aset/smoothie buah segar.png",
+                kategori: "minuman",
+                waktu_update: "10 mins ago"
+            },
+            {
+                id: 4,
+                nama: "Telur Dadar Sayur",
+                deskripsi: "Olahan telur dengan tambahan sayur seperti bayam, wortel, dan daun bawang. Cocok untuk sarapan bergizi dan mengenyangkan.",
+                gambar: "Aset/telur dadar.png",
+                kategori: "sarapan",
+                waktu_update: "15 mins ago"
+            },
+            {
+                id: 5,
+                nama: "Overnight Oats Buah",
+                deskripsi: "Sarapan praktis yang disiapkan malam sebelumnya, terbuat dari oat, susu almond, chia seed, dan buah segar. Nikmat dan bergizi.",
+                gambar: "Aset/oats.png",
+                kategori: "sarapan",
+                waktu_update: "20 mins ago"
+            },
+            {
+                id: 6,
+                nama: "Smoothie Berry Sehat",
+                deskripsi: "Smoothie lembut dari blueberry, stroberi, dan pisang, diblender dengan susu almond dan madu. Cocok untuk camilan sehat kapan saja.",
+                gambar: "Aset/smoothie berry sehat.png",
+                kategori: "minuman",
+                waktu_update: "25 mins ago"
+            }
+        ];
+
+        function tampilkanResep(dataResep) {
+            const container = document.getElementById('resep-container');
+            container.innerHTML = '';
+
+            dataResep.forEach(resep => {
+                const cardHTML = `
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="${resep.gambar}" class="img-fluid object-fit-cover" alt="${resep.nama}">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">${resep.nama}</h5>
+                                    <p class="card-text">${resep.deskripsi}</p>
+                                    <p class="card-text"><small class="text-body-secondary">Last updated ${resep.waktu_update}</small></p>
+                                    <div class="text-end">
+                                        <a href="resepmakanan.html?id=${resep.id}" class="btn btn-resep">Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += cardHTML;
+            });
+        }
+
+        function filterResep(kategori) {
+            const filteredData = kategori === 'semua' ? resepData : resepData.filter(resep => resep.kategori === kategori);
+            tampilkanResep(filteredData);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.body.classList.add('page-loaded');
+
+            setTimeout(() => {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('resep-container').style.display = 'block';
+                tampilkanResep(resepData);
+            }, 1000);
+
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const kategori = this.getAttribute('data-category');
+                    filterResep(kategori);
+                });
+            });
+
+            const links = document.querySelectorAll('a[href]');
+            links.forEach(link => {
+                const href = link.getAttribute('href');
+                if (!href.startsWith('#') && !href.startsWith('javascript') && href !== '' && !href.includes('?id=')) {
+                    link.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        document.body.classList.remove('page-loaded');
+                        document.body.classList.add('fade-out');
+                        setTimeout(() => {
+                            window.location.href = href;
+                        }, 300);
+                    });
+                }
+            });
+        });
+
+        function showContent() {
+            const contentSections = document.getElementById('contentSections');
+            contentSections.classList.add('show');
+
+            setTimeout(() => {
+                const offset = contentSections.getBoundingClientRect().top + window.scrollY - 110;
+                window.scrollTo({ top: offset, behavior: 'smooth' });
+            }, 100);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('page-loaded');
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

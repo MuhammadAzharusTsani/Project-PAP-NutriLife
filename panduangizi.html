@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NutriLife</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="styling/panduan.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light border-bottom shadow-sm sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="dashboard.html"><img src="Aset/Logo NL.png" alt="NutriLife Logo"
+                    height="40"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    <a class="nav-link" href="sdgs.html">Tentang SDG's</a>
+                    <a class="nav-link active-custom" href="panduangizi.html">Panduan Gizi</a>
+                    <a class="nav-link" href="resepsehat.html">Resep Sehat</a>
+                    <a class="nav-link" href="kampanye.html">Kampanye Kesehatan</a>
+                    <a class="nav-link" href="kalkulator1.html">Kalkulator</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container hero-content">
+            <div class="row align-items-center h-100">
+                <div class="col-lg-8 offset-lg-0">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Panduan Gizi Seimbang</h1>
+                        <p class="hero-description">
+                            Informasi ini membantu Anda memahami prinsip gizi seimbang dan bagaimana cara menerapkannya
+                            dalam kehidupan sehari-hari untuk menjaga kesehatan, meningkatkan energi, dan mencegah
+                            berbagai penyakit seperti diabetes dan obesitas.
+                        </p>
+                        <button class="btn-learn-more" onclick="showContent()">Pelajari Lebih Lanjut</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="person-image">
+            <img src="Aset/Adobe Express - file (12) 1.png" alt="Person">
+        </div>
+
+        <div class="bubble-chat">
+            <img src="Aset/Group 79.png" alt="Chat Bubble">
+        </div>
+    </section>
+
+    <div class="content-sections" id="contentSections">
+        <div class="container my-5">
+            <div class="card shadow-sm fade-up">
+                <div class="card-body m-4">
+                    <h2 class="card-title fw-bold">Apa Itu Gizi Seimbang?</h2>
+                    <p class="card-text">Gizi seimbang adalah pola makan yang menyediakan semua nutrisi penting dalam
+                        jumlah
+                        yang tepat untuk menjaga
+                        kesehatan dan fungsi tubuh yang optimal. Konsep ini melibatkan konsumsi berbagai jenis makanan
+                        dari
+                        semua kelompok makanan dalam
+                        proporsi yang tepat, dengan memperhatikan kebutuhan individu berdasarkan usia, jenis kelamin,
+                        tingkat
+                        aktivitas, dan kondisi kesehatan.</p>
+                    <p class="card-text">Di Indonesia, gizi seimbang dikenal dengan konsep "Isi Piringku" yang
+                        menggantikan
+                        konsep 4 Sehat 5 Sempurna.
+                        Konsep ini menekankan proporsi makanan dalam satu piring, yaitu 50% sayur dan buah, serta 50%
+                        makanan
+                        pokok dan lauk pauk.</p>
+                </div>
+            </div>
+
+            <div class="card shadow-sm fade-up">
+                <div class="card-body m-4">
+                    <h2 class="card-title fw-bold mb-4">Prinsip Dasar Gizi Seimbang</h2>
+                    <div id="gizi-seimbang">
+                        <div class="tab-navigation">
+                            <button class="tab-btn active"
+                                onclick="showTab(this, 'Beragam', 'gizi-seimbang')">Beragam</button>
+                            <button class="tab-btn"
+                                onclick="showTab(this, 'Proporsional', 'gizi-seimbang')">Proporsional</button>
+                            <button class="tab-btn" onclick="showTab(this, 'Moderat', 'gizi-seimbang')">Moderat</button>
+                            <button class="tab-btn"
+                                onclick="showTab(this, 'Seimbang', 'gizi-seimbang')">Seimbang</button>
+                        </div>
+
+                        <div class="tab-content-area">
+                            <div id="Beragam" class="tab-pane active">
+                                <div class="content-card">
+                                    <h2 class="fw-bold">Konsumsilah Makanan Beragam</h2>
+                                    <p>Tidak ada satu jenis makanan yang mengandung semua nutrisi yang dibutuhkan tubuh.
+                                        Konsumsi
+                                        makanan yang beragam memastikan tubuh mendapatkan berbagai nutrisi penting:</p>
+                                    <ul class="nutrition-list">
+                                        <li>Karbohidrat: sumber energi utama (nasi, roti, ubi, kentang, jagung)</li>
+                                        <li>Protein: penting untuk pertumbuhan dan perbaikan jaringan (daging, ikan,
+                                            telur,
+                                            kacang-kacangan)</li>
+                                        <li>Lemak: sumber energi dan membantu penyerapan vitamin (minyak, kacang,
+                                            alpukat)</li>
+                                        <li>Vitamin dan mineral: pengatur metabolisme dan fungsi tubuh (buah, sayur,
+                                            produk
+                                            susu)
+                                        </li>
+                                        <li>Serat: menjaga kesehatan pencernaan (sayuran, buah, biji-bijian utuh)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div id="Proporsional" class="tab-pane">
+                                <div class="content-card">
+                                    <h2 class="fw-bold">Aturlah porsi makanan sesuai kebutuhan tubuh.</h2>
+                                    <p>Tubuh kita membutuhkan gizi dalam jumlah yang seimbang—tidak kurang, tidak juga
+                                        berlebihan.
+                                        Proporsional artinya tahu berapa banyak yang harus dikonsumsi dari setiap
+                                        kelompok
+                                        makanan.
+                                    </p>
+                                    <ul class="nutrition-list">
+                                        <li>Jangan makan terlalu banyak sumber energi (karbohidrat & lemak).</li>
+                                        <li>Imbangi dengan cukup protein, sayur, dan buah setiap kali makan.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div id="Moderat" class="tab-pane">
+                                <div class="content-card">
+                                    <h2 class="fw-bold">Batasi konsumsi makanan atau zat yang bisa merugikan kesehatan
+                                        jika
+                                        dikonsumsi berlebihan.</h2>
+                                    <p>Gizi seimbang bukan hanya tentang apa yang harus dimakan, tapi juga tentang apa
+                                        yang
+                                        harus dibatasi. Manfaat: Menjaga kesehatan jangka panjang dan mencegah penyakit
+                                    </p>
+                                    <ul class="nutrition-list">
+                                        <li>Keseimbangan makronutrien (karbohidrat, protein, lemak)</li>
+                                        <li>Antioksidan untuk mencegah penyakit degeneratif</li>
+                                        <li>Serat tinggi untuk kesehatan pencernaan dan jantung</li>
+                                        <li>Asam lemak omega-3 untuk kesehatan jantung dan otak</li>
+                                        <li>Hidrasi yang cukup untuk metabolisme optimal</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div id="Seimbang" class="tab-pane">
+                                <div class="content-card">
+                                    <h2 class="fw-bold">Seimbangkan asupan makanan dengan aktivitas fisik dan pola hidup
+                                        sehat.
+                                    </h2>
+                                    <p>Makanan yang sehat juga perlu didukung oleh gaya hidup yang aktif agar manfaat
+                                        yang masuk
+                                        ke tubuh kita itu maksimal.</p>
+                                    <ul class="nutrition-list">
+                                        <li>Lakukan olahraga ringan 30 menit per hari</li>
+                                        <li>Minum cukup air dan istirahat yang cukup</li>
+                                        <li>Perhatikan waktu makan secara teratur</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm fade-up">
+                <div class="card-body m-4">
+                    <h2 class="card-title fw-bold mb-4">Kebutuhan Gizi Berdasarkan Usia</h2>
+                    <div id="usia-gizi">
+                        <div class="tab-navigation">
+                            <button class="tab-btn active"
+                                onclick="showTab(this, 'anak', 'usia-gizi')">Anak-anak</button>
+                            <button class="tab-btn" onclick="showTab(this, 'remaja', 'usia-gizi')">Remaja</button>
+                            <button class="tab-btn" onclick="showTab(this, 'dewasa', 'usia-gizi')">Dewasa</button>
+                            <button class="tab-btn" onclick="showTab(this, 'lansia', 'usia-gizi')">Lansia</button>
+                        </div>
+
+                        <div class="tab-content-area">
+                            <div id="anak" class="tab-pane active">
+                                <div class="content-card">
+                                    <h2 class="fw-bold">Gizi untuk Anak-anak (1-12 tahun)</h2>
+                                    <p>Anak-anak membutuhkan nutrisi untuk pertumbuhan dan perkembangan optimal:</p>
+                                    <ul class="nutrition-list">
+                                        <li>Protein berkualitas untuk pertumbuhan jaringan dan otot</li>
+                                        <li>Kalsium dan vitamin D untuk perkembangan tulang</li>
+                                        <li>Zat besi untuk perkembangan kognitif dan mencegah anemia</li>
+                                        <li>Omega-3 untuk perkembangan otak</li>
+                                        <li>Serat untuk kesehatan pencernaan</li>
+                                    </ul>
+                                    <p style="margin-top: 15px;">Tetapkan kebiasaan makan yang sehat sejak dini dan
+                                        jadilah
+                                        contoh
+                                        yang baik.</p>
+                                </div>
+                            </div>
+
+                            <div id="remaja" class="tab-pane">
+                                <div class="content-card">
+                                    <h2 class="fw-bold">Gizi untuk Remaja (13-18 tahun)</h2>
+                                    <p>Masa remaja adalah periode perubahan fisik dan hormon. Gizi seimbang sangat
+                                        penting untuk
+                                        mendukung pertumbuhan dan aktivitas, Nutrisi yang diperlukan :</p>
+                                    <ul class="nutrition-list">
+                                        <li>Protein & Energi: pertumbuhan tinggi badan dan masa otot</li>
+                                        <li>Zat besi untuk mencegah anemia, terutama pada remaja putri</li>
+                                        <li>Kalsium & Vitamin D: Membantu pembentukan tulang yang kuat.</li>
+                                        <li>Karbohidrat kompleks untuk energi berkelanjutan</li>
+                                        <li>Vitamin dan mineral untuk mendukung sistem imun</li>
+                                    </ul>
+                                    <p style="margin-top: 15px;">Hindari makanan cepat saji berlebihan dan pastikan
+                                        sarapan yang
+                                        bergizi setiap hari.</p>
+                                </div>
+                            </div>
+
+                            <div id="dewasa" class="tab-pane">
+                                <div class="content-card">
+                                    <h2 class="fw-bold">Gizi untuk Dewasa (19-64 tahun)</h2>
+                                    <p>Dewasa membutuhkan gizi seimbang untuk menjaga kesehatan dan mencegah penyakit:
+                                    </p>
+                                    <ul class="nutrition-list">
+                                        <li>Keseimbangan makronutrien (karbohidrat, protein, lemak)</li>
+                                        <li>Antioksidan untuk mencegah penyakit degeneratif</li>
+                                        <li>Serat tinggi untuk kesehatan pencernaan dan jantung</li>
+                                        <li>Asam lemak omega-3 untuk kesehatan jantung dan otak</li>
+                                        <li>Hidrasi yang cukup untuk metabolisme optimal</li>
+                                    </ul>
+                                    <p style="margin-top: 15px;">Terapkan pola makan teratur, batasi konsumsi gula dan
+                                        garam
+                                        berlebih.</p>
+                                </div>
+                            </div>
+
+                            <div id="lansia" class="tab-pane">
+                                <div class="content-card">
+                                    <h2 class="fw-bold">Gizi untuk Lansia (65+ tahun)</h2>
+                                    <p>Lansia memerlukan perhatian khusus dalam asupan gizi untuk menjaga kualitas
+                                        hidup:</p>
+                                    <ul class="nutrition-list">
+                                        <li>Protein berkualitas tinggi untuk mencegah sarcopenia</li>
+                                        <li>Vitamin D dan kalsium untuk kesehatan tulang</li>
+                                        <li>Vitamin B12 untuk fungsi saraf dan kognitif</li>
+                                        <li>Hidrasi yang cukup karena menurunnya rasa haus</li>
+                                        <li>Makanan mudah dicerna dan kaya nutrisi</li>
+                                    </ul>
+                                    <p style="margin-top: 15px;">Konsultasikan dengan dokter untuk suplemen yang
+                                        diperlukan dan
+                                        perhatikan interaksi obat.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm fade-up">
+                <div class="card-body m-4">
+                    <h2 class="card-title fw-bold">Cara Menerapkan Gizi Seimbang</h2>
+                    <p>Tips praktis untuk menerapkan gizi seimbang dalam kehidupan sehari-hari:</p>
+                    <ul>
+                        <li>Rencanakan menu mingguan yang bervariasi</li>
+                        <li>Baca label nutrisi saat berbelanja</li>
+                        <li>Masak sendiri untuk mengontrol bahan dan cara pengolahan</li>
+                        <li>Siapkan bekal untuk menghindari makanan tidak sehat saat di luar rumah</li>
+                        <li>Makan dengan penuh kesadaran (mindful eating), perhatikan rasa lapar dan kenyang</li>
+                        <li>Hidangkan makanan dengan porsi yang sesuai</li>
+                        <li>Kurangi makan di luar, terutama di restoran cepat saji</li>
+                        <li>Batasi konsumsi makanan olahan, tinggi gula, garam, dan lemak</li>
+                    </ul>
+                    <p>Ingat bahwa perubahan kecil namun konsisten lebih efektif daripada perubahan drastis yang sulit
+                        dipertahankan.</p>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-text">
+                    © 2025 NutriLife. Semua hak cipta dilindungi.
+                </div>
+                <div class="social-links">
+                    <span>Ikuti Kami</span>
+                    <a href="#" class="social-icon"><img src="Aset/Vector.png" alt=""></a>
+                    <a href="#" class="social-icon"><img src="Aset/X.png" alt=""></a>
+                    <a href="#" class="social-icon"><img src="Aset/FB.png" alt=""></a>
+                    <a href="#" class="social-icon"><img src="Aset/YT.png" alt=""></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('page-loaded');
+        });
+
+        const links = document.querySelectorAll('a[href]');
+        links.forEach(link => {
+            const href = link.getAttribute('href');
+            if (!href.startsWith('#') && !href.startsWith('javascript') && href !== '') {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.body.classList.remove('page-loaded');
+                    document.body.classList.add('fade-out');
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 300);
+                });
+            }
+        });
+
+        function showTab(button, tabName, sectionId) {
+            const section = document.getElementById(sectionId);
+            const tabBtns = section.querySelectorAll('.tab-btn');
+            const tabPanes = section.querySelectorAll('.tab-pane');
+
+            tabBtns.forEach(btn => btn.classList.remove('active'));
+            tabPanes.forEach(pane => pane.classList.remove('active'));
+
+            button.classList.add('active');
+            const activePane = document.getElementById(tabName);
+            if (activePane) activePane.classList.add('active');
+        }
+
+        function showContent() {
+            const contentSections = document.getElementById('contentSections');
+            contentSections.classList.add('show');
+
+            setTimeout(() => {
+                const offset = contentSections.getBoundingClientRect().top + window.scrollY - 115; // Sesuaikan 70 dengan tinggi navbar
+                window.scrollTo({ top: offset, behavior: 'smooth' });
+            }, 100);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('page-loaded');
+        });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                } else {
+                    entry.target.classList.remove('show');
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        document.querySelectorAll('.fade-up').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>

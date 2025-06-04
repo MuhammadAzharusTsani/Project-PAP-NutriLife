@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.page-loaded {
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.nav-link {
+    color: #004E64 !important;
+    font-weight: 500;
+}
+
+.nav-link.active-custom {
+    background-color: #004E64;
+    border-radius: 10px;
+    padding: 8px 16px;
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+.navbar-brand {
+    color: #004E64 !important;
+    font-weight: bold;
+}
+
+.hero-section {
+    position: relative;
+    min-height: 90vh;
+    background: linear-gradient(56deg, rgba(0, 78, 100, 0.9), rgba(0, 158, 202, 0.9)), url('../Aset/5431519.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.hero-text {
+    color: white;
+    max-width: 600px;
+    opacity: 0;
+}
+
+.hero-title {
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+.btn-learn-more {
+    background: #ffffff;
+    color: #004E64;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-learn-more:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    color: #004E64;
+}
+
+.person-image {
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    height: 100%;
+    z-index: 2;
+}
+
+.person-image img {
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+}
+
+.content-sections {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.content-sections.show {
+    display: block;
+    opacity: 1;
+}
+
+.card {
+    max-width: 100%;
+    margin-top: 50px;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-body {
+    color: #004E64;
+    flex-grow: 1;
+}
+
+.card p {
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+.btn-teal {
+    background-color: #004E64;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-teal:hover {
+    background-color: #009ECA;
+    color: #fff;
+}
+
+.tab-navigation {
+    display: flex;
+    background: white;
+    padding: 0 20px;
+}
+
+.tab-btn {
+    background: #D3ECE8;
+    color: #004E64;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px 0 0;
+    border-radius: 8px 8px 0 0;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: #004E64;
+    color: white;
+}
+
+.tab-btn:hover:not(.active) {
+    background: #a0c4e0;
+}
+
+.tab-content-area {
+    background: white;
+}
+
+.content-card {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.content-card h2 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.content-card p {
+    font-size: 18px;
+    text-align: justify;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.footer {
+    background: #fffffff2;
+    padding: 20px 0;
+    margin-top: 60px;
+    backdrop-filter: blur(10px);
+    border-top: 1px solid #bab9b9;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.footer-content {
+    max-width: 1200px;
+    font-weight: 500;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 1rem;
+}
+
+.footer-text {
+    color: #004E64;
+    font-size: 14px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-links span {
+    color: #004E64;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    background: #fffffff2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.social-icon img {
+    height: 24px;
+    width: 24px;
+}
+
+.social-icon:hover {
+    background: #009ECA;
+    transform: translateY(-2px);
+}
+
+body.page-loaded .hero-text {
+    animation: slideInLeft 1s ease-out forwards;
+    opacity: 0;
+}
+
+body.page-loaded .person-image img {
+    animation: fadeIn 1.2s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: transform, opacity;
+}
+
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .person-image {
+        right: 2%;
+        height: 50%;
+    }
+
+    .tab-btn {
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+    .hero-text {
+        padding: 0 1rem;
+    }
+
+    .person-image {
+        position: absolute;
+        left: 78%;
+        bottom: 0;
+        transform: translateX(-50%);
+        height: 250px;
+    }
+
+    .btn-learn-more {
+        display: block;
+        margin: 1.5rem auto 0;
+        text-align: center;
+    }
+}

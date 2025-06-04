@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-link {
+    color: #004E64 !important;
+    font-weight: 500;
+}
+
+.nav-link.active-custom {
+    background-color: #004E64;
+    border-radius: 10px;
+    padding: 6px 12px;
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+.navbar-brand {
+    color: #004E64 !important;
+    font-weight: bold;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+}
+
+.btn-kamp {
+    background-color: #004E64;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-kamp:hover {
+    background-color: #003B4D;
+    color: #fff;
+}
+
+.card-body {
+    color: #004E64;
+    flex-grow: 1;
+}
+
+ul {
+    padding-left: 1.2rem;
+    margin-bottom: 8px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.kampanye-img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    height: auto;
+}

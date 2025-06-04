@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NutriLife</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="styling/resepmakan.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light border-bottom shadow-sm sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="dashboard.html"><img src="Aset/Logo NL.png" alt="NutriLife Logo"
+                    height="40"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    <a class="nav-link" href="sdgs.html">Tentang SDG's</a>
+                    <a class="nav-link" href="panduangizi.html">Panduan Gizi</a>
+                    <a class="nav-link active-custom" href="resepsehat.html">Resep Sehat</a>
+                    <a class="nav-link" href="kampanye.html">Kampanye Kesehatan</a>
+                    <a class="nav-link" href="kalkulator1.html">Kalkulator</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <a href="resepsehat.html" class="btn btn-resep mb-3">← Kembali ke Daftar Resep</a>
+
+        <div class="makanan-box">
+            <h2 class="fw-bold"></h2>
+            <p></p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+            <div class="col-md-6">
+                <div class="h-100">
+                    <img src="" alt="" class="img-fluid rounded h-100 w-100 object-fit-cover">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-5" id="cara-masak-section">
+        </div>
+
+        <div class="my-5">
+            <h4 class="fw-bold mb-3">Informasi Gizi</h4>
+            <div class="row g-3">
+                <div class="col-6 col-md-3">
+                    <div class="info-box"></div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="info-box"></div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="info-box"></div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="info-box"></div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="info-box"></div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="info-box"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const resepData = {
+            1: {
+                nama: "Nasi Merah Ayam Panggang",
+                deskripsi: "Menu utama yang kaya serat dan rendah lemak, cocok untuk mendukung gaya hidup sehat dengan kombinasi karbohidrat kompleks dan protein berkualitas tinggi",
+                gambar: "Aset/nasi merah ayam.png",
+                bahan: [
+                    "1 Porsi Nasi Merah",
+                    "1 Potong Dada Ayam Tanpa Kulit",
+                    "1 sdm Saus Tomat",
+                    "Garam, lada, dan bumbu secukupnya"
+                ],
+                cara_masak: [
+                    {
+                        step: 1,
+                        judul: "Marinasi ayam",
+                        detail: "Cuci bersih dada ayam tanpa kulit, lalu lumuri dengan garam, lada, saus tomat, dan bumbu pilihan (seperti bawang putih bubuk, oregano, atau paprika bubuk jika suka). Diamkan selama kurang lebih 15 menit agar bumbu meresap sempurna. Simpan dalam wadah tertutup di suhu ruang atau bisa juga didiamkan di dalam kulkas jika ingin dimarinasi lebih lama."
+                    },
+                    {
+                        step: 2,
+                        judul: "Memasak ayam",
+                        detail: "Panaskan teflon dengan sedikit minyak atau bisa juga tanpa minyak jika menggunakan teflon anti lengket. Masak ayam dengan api sedang, balik sesekali agar matang merata. Masak hingga permukaan ayam kecokelatan dan bagian dalamnya matang sempurna (sekitar 5–7 menit per sisi tergantung ketebalan ayam)."
+                    },
+                    {
+                        step: 3,
+                        judul: "Penyajian",
+                        detail: "Siapkan seporsi nasi merah hangat di piring. Letakkan potongan ayam di atas atau di samping nasi. Tambahkan lalapan segar seperti irisan tomat, mentimun, dan selada agar lebih seimbang dan menambah kesegaran saat disantap."
+                    }
+                ],
+                gizi: {
+                    kalori: "420 kalori",
+                    lemak: "8 gram",
+                    serat: "6 gram",
+                    protein: "35 gram",
+                    karbohidrat: "45 gram",
+                    natrium: "580 mg"
+                }
+            },
+            2: {
+                nama: "Salad Sayur Pelangi",
+                deskripsi: "Campuran sayur segar berwarna-warni seperti wortel, kol ungu, dan tomat yang disajikan dengan dressing minyak zaitun dan lemon. Segar, renyah, dan cocok sebagai menu pembuka.",
+                gambar: "Aset/salad sayur.png",
+                bahan: [
+                    "1/2 wortel (parut halus)",
+                    "1/2 kol ungu (iris tipis)",
+                    "5 buah tomat ceri (belah dua)",
+                    "1/4 bawang bombai (iris halus)",
+                    "2 sdm jagung manis",
+                    "1 sdm minyak zaitun",
+                    "1 sdt perasan lemon",
+                    "Garam dan lada secukupnya"
+                ],
+                cara_masak: [
+                    {
+                        step: 1,
+                        judul: "Siapkan sayuran",
+                        detail: "Cuci bersih semua sayuran. Parut wortel, iris kol ungu dan bawang bombai tipis-tipis. Belah tomat ceri menjadi dua dan tiriskan jagung manis jika menggunakan jagung kaleng."
+                    },
+                    {
+                        step: 2,
+                        judul: "Campurkan dalam Mangkuk",
+                        detail: "Masukkan semua sayuran ke dalam mangkuk besar. Aduk perlahan agar sayur tetap segar dan tidak hancur."
+                    },
+                    {
+                        step: 3,
+                        judul: "Buat Dressing",
+                        detail: "Campurkan minyak zaitun dan perasan lemon dalam wadah kecil. Tambahkan garam dan lada secukupnya, lalu aduk hingga rata."
+                    },
+                    {
+                        step: 4,
+                        judul: "Penyelesaian",
+                        detail: "Tuangkan dressing ke dalam mangkuk salad, lalu aduk hingga semua sayuran terlapisi rata. Sajikan segera agar tetap renyah."
+                    }
+                ],
+                gizi: {
+                    kalori: "209 kalori",
+                    lemak: "14.9 gram",
+                    serat: "4.5 gram",
+                    protein: "3.3 gram",
+                    karbohidrat: "17.3 gram",
+                    natrium: "68 mg"
+                }
+            },
+            3: {
+                nama: "Smoothie Buah Segar",
+                deskripsi: "Minuman sehat yang menyegarkan, terbuat dari pisang, stroberi, dan yogurt rendah lemak. Rasanya manis alami, teksturnya lembut, dan cocok untuk sarapan cepat atau camilan sehat di siang hari.",
+                gambar: "Aset/smoothie buah segar.png",
+                bahan: [
+                    "1 buah pisang matang",
+                    "5 Buah stroberi segar",
+                    "150 ml yoghurt rendah lemak",
+                    "1 sdm madu (opsional)",
+                    "Es batu secukupnya"
+                ],
+                cara_masak: [
+                    {
+                        step: 1,
+                        judul: "Siapkan buah",
+                        detail: "Kupas pisang dan potong kecil-kecil. Cuci stroberi, buang daunnya, lalu potong jadi dua."
+                    },
+                    {
+                        step: 2,
+                        judul: "Masukkan ke blender",
+                        detail: "Tambahkan pisang, stroberi, yogurt, dan madu ke dalam blender. Masukkan juga es batu secukupnya agar smoothie lebih dingin."
+                    },
+                    {
+                        step: 3,
+                        judul: "Blender hingga halus",
+                        detail: "Nyalakan blender dan proses sampai tekstur lembut tanpa gumpalan. Jika perlu, hentikan sejenak untuk mengaduk bahan di sisi blender."
+                    },
+                    {
+                        step: 4,
+                        judul: "Sajikan",
+                        detail: "Tuang smoothie ke dalam gelas. Tambahkan irisan stroberi atau daun mint sebagai garnish. Nikmati selagi dingin!"
+                    }
+                ],
+                gizi: {
+                    kalori: "277 kalori",
+                    lemak: "2.5 gram",
+                    serat: "2.7 gram",
+                    protein: "6.5 gram",
+                    karbohidrat: "53 gram",
+                    natrium: "73 mg"
+                }
+            },
+            4: {
+                nama: "Telur Dadar Sayur",
+                deskripsi: "Olahan telur dengan tambahan sayur seperti bayam, wortel, dan daun bawang. Cocok untuk sarapan bergizi dan mengenyangkan.",
+                gambar: "Aset/telur dadar.png",
+                bahan: [
+                    "2 butir telur ayam",
+                    "2 lembar bayam",
+                    "1 sdm wortel parut",
+                    "1 sdm daun bawang",
+                    "Garam dan lada secukupnya",
+                    "Minyak goreng"
+                ],
+                cara_masak: [
+                    {
+                        step: 1,
+                        judul: "Persiapan bahan",
+                        detail: "Cuci bersih sayuran, lalu cincang kasar bayam, parut wortel, dan iris tipis daun bawang. Sisihkan."
+                    },
+                    {
+                        step: 2,
+                        judul: "Kocok adonan",
+                        detail: "Pecahkan telur ke dalam mangkuk, tambahkan sayuran yang sudah disiapkan. Bumbui dengan garam dan lada. Kocok hingga semua bahan tercampur rata."
+                    },
+                    {
+                        step: 3,
+                        judul: "Goreng adonan",
+                        detail: "Panaskan sedikit minyak dalam wajan anti lengket. Tuang adonan telur dan ratakan. Masak dengan api kecil hingga bagian bawah matang kecokelatan. Balik telur dengan hati-hati, lalu masak sisi satunya hingga matang sempurna."
+                    },
+                    {
+                        step: 4,
+                        judul: "Sajikan",
+                        detail: "Angkat dan sajikan telur dadar sayur selagi hangat. Bisa disajikan utuh atau dipotong-potong sesuai selera."
+                    }
+                ],
+                gizi: {
+                    kalori: "231 kalori",
+                    lemak: "14.6 gram",
+                    serat: "0.9 gram",
+                    protein: "12.8 gram",
+                    karbohidrat: "4 gram",
+                    natrium: "156 mg"
+                }
+            },
+            5: {
+                nama: "Overnight Oats Buah",
+                deskripsi: "Sarapan praktis yang disiapkan malam sebelumnya, terbuat dari oat, susu almond, chia seed, dan buah segar. Nikmat dan bergizi.",
+                gambar: "Aset/oats.png",
+                bahan: [
+                    "150 ml susu almond",
+                    "5 sdm oat instan",
+                    "1 sdm madu",
+                    "1 sdt chia seed",
+                    "Buah segar (pisang, apel, stroberi)"
+                ],
+                cara_masak: [
+                    {
+                        step: 1,
+                        judul: "Campur bahan",
+                        detail: "Dalam jar atau wadah tertutup, campurkan oat, susu almond, madu, dan chia seed. Aduk rata hingga tercampur sempurna."
+                    },
+                    {
+                        step: 2,
+                        judul: "Simpan semalaman",
+                        detail: "Tutup wadah dan simpan di dalam kulkas minimal 6 jam (idealnya semalaman). Oat dan chia seed akan menyerap cairan dan menjadi lembut seperti puding."
+                    },
+                    {
+                        step: 3,
+                        judul: "Tambahkan topping",
+                        detail: "Di pagi hari, buka wadah dan tambahkan potongan buah segar di atasnya. Aduk sedikit atau sajikan langsung dengan topping warna-warni."
+                    },
+                    {
+                        step: 4,
+                        judul: "Sajikan",
+                        detail: "Overnight oats enak disantap dalam keadaan dingin. Tapi jika kamu suka hangat, bisa juga dihangatkan sebentar di microwave tanpa buahnya."
+                    }
+                ],
+                gizi: {
+                    kalori: "342 kalori",
+                    lemak: "9.7 gram",
+                    serat: "9.5 gram",
+                    protein: "8.4 gram",
+                    karbohidrat: "60 gram",
+                    natrium: "154 mg"
+                }
+            },
+            6: {
+                nama: "Smoothie Berry Sehat",
+                deskripsi: "Smoothie lembut dari blueberry, stroberi, dan pisang, diblender dengan susu almond dan madu. Cocok untuk camilan sehat kapan saja.",
+                gambar: "Aset/smoothie berry sehat.png",
+                bahan: [
+                    "5 buah stroberi",
+                    "1 buah pisang",
+                    "2 sdm blueberry",
+                    "150 ml susu almond",
+                    "1 sdm madu"
+                ],
+                cara_masak: [
+                    {
+                        step: 1,
+                        judul: "Siapkan bahan",
+                        detail: "Cuci semua buah hingga bersih. Potong pisang dan stroberi menjadi bagian kecil agar mudah diblender."
+                    },
+                    {
+                        step: 2,
+                        judul: "Blender",
+                        detail: "Masukkan semua buah, susu almond, dan madu ke dalam blender. Blender hingga halus dan creamy. Kamu bisa tambahkan es batu jika ingin sensasi lebih dingin dan segar."
+                    },
+                    {
+                        step: 3,
+                        judul: "Sajikan",
+                        detail: "Tuang ke dalam gelas. Bisa dihias dengan potongan buah atau chia seed di atasnya untuk tampilan lebih menarik dan nutrisi tambahan."
+                    }
+                ],
+                gizi: {
+                    kalori: "263 kalori",
+                    lemak: "2.8 gram",
+                    serat: "4.8 gram",
+                    protein: "2.5 gram",
+                    karbohidrat: "45.2 gram",
+                    natrium: "152 mg"
+                }
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const resepId = urlParams.get('id');
+
+            if (resepId && resepData[resepId]) {
+                const resep = resepData[resepId];
+
+                const titleElement = document.querySelector('.makanan-box h2');
+                const descElement = document.querySelector('.makanan-box p');
+
+                if (titleElement) titleElement.textContent = resep.nama;
+                if (descElement) descElement.textContent = resep.deskripsi;
+
+                const imgElement = document.querySelector('.object-fit-cover');
+                if (imgElement) {
+                    imgElement.src = resep.gambar;
+                    imgElement.alt = resep.nama;
+                }
+
+                const bahanContainer = document.querySelector('.card-body');
+                if (bahanContainer) {
+                    let bahanHTML = '<h5 class="fw-bold mb-3">Bahan - Bahan</h5><div class="d-flex flex-column gap-3">';
+                    resep.bahan.forEach((bahan, index) => {
+                        bahanHTML += `<div><span class="number-circle">${index + 1}</span> ${bahan}</div>`;
+                    });
+                    bahanHTML += '</div>';
+                    bahanContainer.innerHTML = bahanHTML;
+                }
+
+                const caraMasakSection = document.getElementById('cara-masak-section');
+                if (caraMasakSection && resep.cara_masak?.length) {
+                    let caraMasakHTML = '<h4 class="fw-bold mb-3">Cara Memasak</h4>';
+                    resep.cara_masak.forEach(langkah => {
+                        caraMasakHTML += `
+                    <div class="step-box">
+                        <div><span class="number-circle">${langkah.step}</span><strong>${langkah.judul}:</strong> ${langkah.detail}</div>
+                    </div>
+                `;
+                    });
+                    caraMasakSection.innerHTML = caraMasakHTML;
+                }
+
+                const giziBoxes = document.querySelectorAll('.info-box');
+                const giziData = [
+                    resep.gizi.kalori,
+                    resep.gizi.lemak,
+                    resep.gizi.serat,
+                    resep.gizi.protein,
+                    resep.gizi.karbohidrat,
+                    resep.gizi.natrium
+                ];
+
+                const giziLabels = [
+                    'Energi',
+                    'Lemak',
+                    'Serat',
+                    'Protein',
+                    'Karbohidrat',
+                    'Natrium (Sodium)'
+                ];
+
+                giziBoxes.forEach((box, index) => {
+                    if (giziData[index]) {
+                        box.innerHTML = `${giziData[index]}<br><span class="info-label">${giziLabels[index]}</span>`;
+                    }
+                });
+
+                document.title = `${resep.nama} - NutriLife`;
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
